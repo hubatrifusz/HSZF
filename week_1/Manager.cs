@@ -24,10 +24,16 @@ namespace week_1
             }
         }
 
-        public void CompleteTodo(Todo todo)
+        public void CompleteTodo(int id)
         {
-            todo.IsCompleted = true;
-            Console.WriteLine($"{todo.Title} done!");
+            var todo = todos.Find(t => t.Id == id);
+            if (todo != null) { 
+                todo.IsCompleted = true;
+                Console.WriteLine($"{todo.Title} is completed!");
+            }
+            else {
+                Console.WriteLine("No todo with this id.");
+            }
         }
     }
 }
