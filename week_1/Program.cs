@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Manager manager = new Manager();
+            Todo todo1 = new Todo(1, "Fogmosás");
+            manager.AddTodo(todo1);
+            manager.ListTodos();
         }
     }
 }
