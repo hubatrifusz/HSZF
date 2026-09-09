@@ -13,7 +13,7 @@ namespace week_1
         public void AddTodo(Todo todo)
         {
             todos.Add(todo);
-            Console.WriteLine($"{todo.Title} hozzáadva!");
+            Console.WriteLine($"{todo.Title} added!");
         }
 
         public void ListTodos()
@@ -22,6 +22,12 @@ namespace week_1
             {
                 Console.WriteLine(t.ToString());
             }
+        }
+
+        public void CompleteTodo(Todo todo)
+        {
+            todo.IsCompleted = true;
+            Console.WriteLine($"{todo.Title} done!");
         }
     }
 }
